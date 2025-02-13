@@ -157,7 +157,7 @@
 .footer-horse {
 	right: 80px;
 	bottom: rem(200);
-	animation: moveHorse 8s infinite;
+	animation: moveHorse 8s infinite ease-in-out;
 }
 
 @keyframes moveHorse {
@@ -168,11 +168,11 @@
 		transform: translate(20px, 10px);
 	}
 	50% {
-		transform: translateX(30px, 0);
+		transform: translateX(50px, 0);
 	}
 
 	50% {
-		transform: translateX(20px, 10px);
+		transform: translateX(20px, -10px);
 	}
 
 	100% {
