@@ -22,10 +22,10 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			+e.row.row
-				+e.col.col-auto 
+				+e.col.col-lg-auto.col 
 					a(href="/")
 						img(src="img/svg/logo.svg", alt="logo", class="logo") 
-				.col.order-lg-0.order-last
+				.col-lg.order-lg-0.order-last.m-0
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
 							+menu-toggle()

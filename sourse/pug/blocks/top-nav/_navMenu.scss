@@ -20,7 +20,10 @@
 	}
 	a {
 		display: block;
-		padding: rem(10) calc(40px / 2);
+		@include media-breakpoint-up(xl) {
+			padding: rem(10) calc(40px / 2);
+		}
+		padding: rem(10) calc(20px / 2);
 	}
 }
 

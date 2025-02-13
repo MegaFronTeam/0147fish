@@ -10,7 +10,6 @@
 		content: "";
 		position: absolute;
 		width: 200%;
-		aspect-ratio: 2390/ 263;
 		// height: ;
 		left: calc(50%);
 		transform: translate(-50%, -60%);
@@ -18,6 +17,12 @@
 		z-index: 2;
 
 		background: #ffffff;
+		aspect-ratio: 1090/ 263;
+		@include media-breakpoint-up(md) {
+			aspect-ratio: 2390/ 263;
+
+			// filter: blur(calc(1vw + 20px));
+		}
 		filter: blur(calc(1vw + 20px));
 	}
 
@@ -160,7 +165,10 @@
 		position: absolute;
 		mix-blend-mode: screen;
 		z-index: 2;
-		--pers: calc(100% / 1440);
+		@include media-breakpoint-up(md) {
+			--pers: calc(100% / 1440);
+		}
+		--pers: calc(100% / 940);
 		&:nth-child(1) {
 			width: calc(250 * var(--pers));
 			top: calc(var(--sPT));
@@ -326,7 +334,7 @@
 		}
 		@keyframes moveCloud9 {
 			0% {
-				transform: translateX(-);
+				transform: translateX(0);
 			}
 			50% {
 				transform: translateX(-13vw);
