@@ -241,7 +241,7 @@
 				transform: translateX(0vw);
 			}
 			50% {
-				transform: translateX(50vw);
+				transform: translateX(20vw);
 			}
 			100% {
 				transform: translateX(0vw);
@@ -260,35 +260,35 @@
 		}
 		@keyframes moveCloud3 {
 			0% {
-				transform: translateX(-20vw);
+				transform: translateX(0);
 			}
 			50% {
-				transform: translateX(30vw);
+				transform: translateX(-10vw);
 			}
 			100% {
-				transform: translateX(-20vw);
+				transform: translateX(0);
 			}
 		}
 		@keyframes moveCloud4 {
 			0% {
-				transform: translateX(-10vw);
+				transform: translateX(0);
 			}
 			50% {
-				transform: translateX(50vw);
+				transform: translateX(-10vw);
 			}
 			100% {
-				transform: translateX(-10vw);
+				transform: translateX(0);
 			}
 		}
 		@keyframes moveCloud5 {
 			0% {
-				transform: translateX(-20vw);
+				transform: translateX(0vw);
 			}
 			50% {
-				transform: translateX(10vw);
+				transform: translateX(-10vw);
 			}
 			100% {
-				transform: translateX(-20vw);
+				transform: translateX(0vw);
 			}
 		}
 		@keyframes moveCloud6 {
@@ -304,57 +304,57 @@
 		}
 		@keyframes moveCloud7 {
 			0% {
-				transform: translateX(-40vw);
+				transform: translateX(0);
 			}
 			50% {
 				transform: translateX(30vw);
 			}
 			100% {
-				transform: translateX(-40vw);
+				transform: translateX(0);
 			}
 		}
 		@keyframes moveCloud8 {
 			0% {
-				transform: translateX(-15vw);
+				transform: translateX(0);
 			}
 			50% {
 				transform: translateX(11vw);
 			}
 			100% {
-				transform: translateX(-15vw);
+				transform: translateX(0);
 			}
 		}
 		@keyframes moveCloud9 {
 			0% {
-				transform: translateX(-11vw);
+				transform: translateX(-);
 			}
 			50% {
-				transform: translateX(13vw);
+				transform: translateX(-13vw);
 			}
 			100% {
-				transform: translateX(-11vw);
+				transform: translateX(0);
 			}
 		}
 		@keyframes moveCloud10 {
 			0% {
-				transform: translateX(-14vw);
+				transform: translateX(0);
 			}
 			50% {
 				transform: translateX(15vw);
 			}
 			100% {
-				transform: translateX(-14vw);
+				transform: translateX(0);
 			}
 		}
 		@keyframes moveCloud11 {
 			0% {
-				transform: translateX(-21vw);
+				transform: translateX(0);
 			}
 			50% {
 				transform: translateX(12vw);
 			}
 			100% {
-				transform: translateX(-21vw);
+				transform: translateX(0);
 			}
 		}
 	}
