@@ -3,7 +3,22 @@ mixin sAbout(data)
 	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sAbout
-				
+				h2 About the Project
+				p.h5 The most common theory suggests that the name<br/>of the island Cyprus comes from the Latin word "cuprum", which<br/>means "copper". As early as the 13th century BCE, Cyprus was widely known as the "copper" island, a center for copper mining.
+			+img('img/sAbout-img-1.jpg').img-1.border-40
+			+e.info-card--1.border-40
+				span 69km
+				p total length<br/>of the exhibition
 			+e.row.row
+				.col-auto
+					+e.wrap
+						+e.info-card-2
+							span 150+ 
+							p fishes installed along the coast of the Cyprus island
+						+img('img/sAbout-img-3.jpg').img-2.border-40
+				.col-auto.ms-auto
+					+img('img/sAbout-img-2.jpg').img-3.border-40
+					+e.info-card--3.border-40
+						span 98kg
+						p of copper<br/>used to make fishes
 	// end sAbout
