@@ -1,0 +1,33 @@
+mixin sPartners(data)
+	// start sPartners
+	+b.SECTION.sPartners.section#sPartners&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Partners
+				p.h5 Cyprus was widely known as the "copper" island, a center for copper mining.
+			+e.row
+				mixin item(i,t)
+					+b.col
+						+b.sPartners-item.card
+							+e.title.h6!=t
+							if block
+								block
+							else
+								+e.img-wrap
+									+img(src=`img/logo-${i}.png`).res-i 
+							
+				+item('1','Pafos Region fund donated 100 000€')
+				+item('2','Cyprus University of Technology donated 200 000€')
+				+item('3','Cyprus Children’s Fund helped to install 60 fishes')
+				+item('4','Cyprus Aspiration Fund donated 50 000€')
+				+item('5','Structural Funds of the EU in Cyprus took part in installing 45 fishes')
+				
+				+item('6','SALVUS funds donated 300 000€')
+				+item('7','Bank of Cyprus Cultural Foundation donated 50 000€')
+				+item('8','University of Cyprus donated 10 000€')
+				+item('9','University of Limassol donated 20 000€')
+				+item('10','Deputy Ministry of Tourism helped to install 100 fishes')
+				+item('','Become our partner and do good deeds!')
+					a.btn.btn-warning(href="#") Join 
+						span.d-none.d-sm-inline our Project
+	// end sPartners

@@ -1,0 +1,25 @@
+mixin sHowToOrder(data)
+	// start sHowToOrder
+	+b.SECTION.sHowToOrder.section#sHowToOrder&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 How to Order
+				p.h5 Cyprus was widely known as the "copper" island, a center for copper mining.
+			+e.row.row
+				mixin item(i,t,p)
+					+b.col-12.col-md-4
+						+b.sHowToOrder-item
+							+e.img-wrap
+								+img(src=`img/${i}`).res-i
+							+e.title.h4!=t
+							+e.text.text-secondary!=p
+							block
+				+item('howToOrder-1.png',`Choose from our gallery`,'You will find more than 100 types of fish installations in our gallery, so you are sure to find something suitable.')
+					+e.btn.btn.btn-warning(href="#") Choose Art Work
+
+				+item('howToOrder-2.png',`Generate  by&nbsp;your criteria`,'If you have a special request to create something unique, your option is to generate an art work using a prompt.')
+					+e.btn.btn.btn-warning(href="#" disabled) coming soon
+
+				+item('howToOrder-3.svg',`Create <br> from your sketch`,'Have a hand in creating an installation - draw your art object and we will make it according to your drawing.')
+					+e.btn.btn.btn-warning(href="#") Create Art Work
+	// end sHowToOrder

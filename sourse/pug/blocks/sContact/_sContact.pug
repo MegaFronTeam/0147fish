@@ -3,7 +3,13 @@ mixin sContact()
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sContact
-				
-			+e.row.row
+				h2 Contact Us
+				p.h5 We are happy to answer any questions you have,   and usually we respond within a few hours.
+			+form-wrap
+				+input("Name","text","name")
+				+input("Email","email","email")
+				+input("Message","textarea","message")
+				.text-center
+					button.btn.btn-warning(type="submit") Send Message
+
 	// end sContact

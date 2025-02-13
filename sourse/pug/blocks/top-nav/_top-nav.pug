@@ -22,13 +22,17 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			+e.row.row
-				.col-4
+				+e.col.col-auto 
+					a(href="/")
+						img(src="img/svg/logo.svg", alt="logo", class="logo") 
 				.col.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
 							+menu-toggle()
 							+mnu()
 					
+				+e.col.col-auto
+					a.btn.btn-sm.btn-primary(href="#") contact us
 				.col-auto.d-lg-none
 					+menu-toggle()
 	// end top-nav

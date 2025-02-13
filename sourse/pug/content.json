@@ -1,34 +1,29 @@
 {
-	"nav":[
-		{ "name":"Наши работы", "url":"#"},
-		{	"name":"Цены", "url":"#"},
-		{"name":"Калькулятор", "url":"#"},
-		{"name":"Акции", "url":"#"} ,
-		{
-			"name":"Заказать", 
-			"url":"#"
-			}
+	"nav": [
+		{"name": "About the Project", "url": "#"},
+		{"name": "How to Order", "url": "#"},
+		{"name": "Gallery", "url": "#"},
+		{"name": "Reviews", "url": "#"},
+		{"name": "Partners", "url": "#"}
 	],
-	"social":[
-		"fb","instagram","telegram"
-	],
-	"index":{
+	"social": ["fb", "instagram", "telegram"],
+	"index": {
 		"head": {
 			"title": "Главная"
 		}
 	},
 	"items": [
-			{
+		{
 			"title": "заловок",
 			"text": "текст"
 		},
-			{
+		{
 			"title": "заловок 22",
 			"text": "текст"
 		},
-			{
+		{
 			"title": "заловок 33",
 			"text": "текст"
-			}
-		]
-	}
+		}
+	]
+}

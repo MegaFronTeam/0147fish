@@ -4,6 +4,11 @@ mixin allcss()
 	//- link(href="libs/@fancyapps/ui/fancybox/fancybox.css", rel="stylesheet")
 	//- link(href=`css/main.min.css?v=${version}`, rel="stylesheet")
 	//- link(href=`css/custom-bootstrap.min.css`, rel="stylesheet")
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+	
+	link(href=`libs/swiper/swiper-bundle.min.css`, rel="stylesheet")
 	link(href=`css/main.min.css`, rel="stylesheet")
 
 mixin allcjs() 
@@ -13,5 +18,6 @@ mixin allcjs()
 	script(src="libs/inputmask/inputmask.min.js") 
 	script(src="libs/select2/js/select2.min.js") 
 	script(src="libs/select2/js/i18n/ru.js")  
+	script(src="libs/masonry-layout/masonry.pkgd.min.js")  
 	script(src=`js/JSCCommon.js`)
 	script(   src=`js/common.js`)

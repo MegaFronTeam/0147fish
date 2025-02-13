@@ -1,0 +1,26 @@
+mixin sGallery(data)
+	// start sGallery
+	+b.SECTION.sGallery.section#sGallery&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Gallery
+				p.h5 Choose your Fish from the Gallery and send us its number  via the Contact Us form.
+				a.btn.btn-warning(href="#") contact us
+			+e.slider--js.swiper
+				.swiper-wrapper
+
+					mixin item(i,t)
+						+e.slide.swiper-slide
+							+b.sGallery-item 
+								p=t
+								+e.img-wrap
+									+img(src=`img/prod-${i}.png`).res-i
+								+e.btn.btn.btn-sm.btn-warning choose fish
+					- for (var x = 0; x < 4; x++)
+						+item('1','Fish 12')
+						+item('2','Fish 13')
+						+item('3','Fish 14')
+			+e.controls
+				+arrow
+				.swiper-pagination
+	// end sGallery

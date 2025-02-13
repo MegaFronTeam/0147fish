@@ -59,6 +59,38 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
 	});
+
+	new Swiper(".sGallery__slider--js", {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		// loop: true,
+		// loopAdditionalSlides: 10,
+		navigation: {
+			nextEl: ".sGallery .swiper-button-next",
+			prevEl: ".sGallery .swiper-button-prev",
+		},
+		pagination: {
+			el: ".sGallery .swiper-pagination",
+			type: "bullets",
+			clickable: true,
+			dynamicBullets: true,
+			renderBullet(index, className) {
+				return (
+					'<span class="' +
+					className +
+					'">' +
+					(index < 9 ? "0" : "") +
+					(index + 1) +
+					"</span>"
+				);
+			},
+		},
+	});
+
+	$(".grid-js").masonry({
+		itemSelector: ".grid-item",
+		columnWidth: ".grid-item",
+	});
 }
 if (document.readyState !== "loading") {
 	eventHandler();
