@@ -1,9 +1,26 @@
 mixin sMap(data)
 	// start sMap
-	+b.SECTION.sMap.section#sMap&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sMap
-				
-			+e.row.row
+	+b.sMap#sMap.section&attributes(attributes)
+		.clouds
+			- for (var x = 1; x < 12; x++)
+				img(src=`img/cloud-${x}.png`, alt="")
+		.text-center
+			+e.wrap
+				+e.dots-wrap
+					mixin item(i, t='Title of the installation')
+						+e.dot-item
+							+e.dot-btn.btn.btn-warning
+							+e.dot-info.card
+								+e.img-wrap
+									img(src="img/rew-1.png").res-i
+								+e.title!= t
+					+item()
+					+item()
+					+item()
+					+item()
+					+item()
+					//- +item()
+					 
+				+img(src="img/map.png").res-i.map
+				img(src="img/ship.png", alt="").ship
 	// end sMap

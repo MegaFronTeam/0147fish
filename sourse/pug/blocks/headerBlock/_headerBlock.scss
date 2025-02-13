@@ -3,6 +3,10 @@
 	--sPT: #{rem(80)};
 	--sPB: 10px;
 	--sTPB: #{rem(40)};
+	position: relative;
+	z-index: 3;
+	background-color: #fff;
+
 	// min-height: 100vh;
 	// min-height: calc(var(--vh, 1vh) * 100);
 	text-align: center;

@@ -1,5 +1,7 @@
 "use strict";
 
+const {create} = require("browser-sync");
+
 // import Swiper from '../libs/swiper/swiper-bundle.min.mjs';
 // import JSCCommon from "./JSCCommon.js";
 
@@ -87,9 +89,28 @@ function eventHandler() {
 		},
 	});
 
-	$(".grid-js").masonry({
+	new Swiper(".sReviews__slider--js", {
+		slidesPerView: "auto",
+		spaceBetween: 0,
+		// init: false,
+		// loop: true,
+		// loopAdditionalSlides: 10,
+	});
+
+	const $grid = $(".grid-js").masonry({
 		itemSelector: ".grid-item",
 		columnWidth: ".grid-item",
+	});
+
+	$(document).on("click", ".btn-more-js", function () {
+		var cardHidden = $(".sReviews__slide:hidden");
+
+		if (cardHidden) {
+			$(this).hide();
+			cardHidden.show(function () {
+				$grid.masonry("layout");
+			});
+		}
 	});
 }
 if (document.readyState !== "loading") {

@@ -1,10 +1,13 @@
 .footer {
 	margin-top: auto;
-	background-color: #01252a;
+
 	background-image: url(../img/footer-bg.png);
+	mix-blend-mode: luminosity;
 	background-position: bottom center;
 	background-size: cover;
 	// --sPT: #{rem()};
+	position: relative;
+	z-index: 2;
 	--sPB: #{rem(48)};
 	// --sTPB: #{rem()};
 	&__row {
@@ -30,10 +33,16 @@
 	}
 
 	&__soc {
+		padding-top: var(--sPT);
+		margin-bottom: rem(40);
 		a {
 			color: #fff;
 		}
-		@include rfs(72px);
+		@include media-breakpoint-only(md) {
+			@include rfs(72px);
+		}
+		font-size: 24px;
+
 		font-weight: bold;
 	}
 	&__copy {
@@ -90,5 +99,83 @@
 	}
 
 	@include media-breakpoint-down(xs) {
+	}
+}
+
+.footer-img {
+	position: absolute;
+	bottom: 0;
+	mix-blend-mode: luminosity;
+	// z-index: -1;
+	// z-index: 2;
+}
+.footer-stone {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	max-width: 70%;
+	// z-index: -1;
+}
+
+.footer-right {
+	right: 0;
+	max-width: 40%;
+
+	animation: swayGrass2 9s infinite ease-in-out;
+
+	@keyframes swayGrass2 {
+		0% {
+			transform: translate(0, 0);
+		}
+		50% {
+			transform: translate(20px, 5px);
+		}
+		100% {
+			transform: translate(0, 0);
+		}
+	}
+}
+
+.footer-left {
+	left: 0;
+	max-width: 40%;
+	animation: swayGrass 8s infinite ease-in-out;
+
+	@keyframes swayGrass {
+		0% {
+			transform: translate(0, 0);
+		}
+		50% {
+			transform: translate(-10px, 10px);
+		}
+		100% {
+			transform: translate(0, 0);
+		}
+	}
+}
+
+.footer-horse {
+	right: 80px;
+	bottom: rem(200);
+	animation: moveHorse 8s infinite;
+}
+
+@keyframes moveHorse {
+	0% {
+		transform: translate(0, 0);
+	}
+	25% {
+		transform: translate(20px, 10px);
+	}
+	50% {
+		transform: translateX(30px, 0);
+	}
+
+	50% {
+		transform: translateX(20px, 10px);
+	}
+
+	100% {
+		transform: translateX(0, 0);
 	}
 }

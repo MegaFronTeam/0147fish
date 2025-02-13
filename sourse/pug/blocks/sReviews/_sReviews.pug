@@ -5,25 +5,31 @@ mixin sReviews(data)
 		.container
 			+b.section-title.text-center
 				h2 Reviews
-				
-			+e.row.row.grid-js
-				mixin item(i,t,p)
-					.col-lg-4.col-md-6.col-sm-6.col-xs-12.grid-item
-						+b.sReviews-item.card
-							+e.img-wrap
-								+img(src=`img/rew-${i}.png`).res-i
-							p=t
-							+icon("fish")
-							+e.addr!=p
-							
-				+item(1,'Great quality and craftsmanship! We purchased one for each of my fisherman sons. Love this art, very stylish! Lovely art! Well made, and local artist!','Ann Smith, USA')
-				+item(2,'It was great to help people make an amazing artworks.',' Marco Marazzi, Italy')
-				+item(3,' Great quality and craftsmanship! We purchased one for each of my fisherman sons. Love this art, very stylish! Lovely art! Well made, and local artist!',' Ann Smith, USA')
-				+item(5,' Great quality and craftsmanship! We purchased one for each of my fisherman sons. It was great to help people make an amazing artworks.',' Rebecca Ivory, Germany')
-				+item(4,' Great, inexpensive metal art pieces all made on Cyprus! It was great to help people make an amazing artworks.',' Marco Marazzi, Italy')
-				+item(6,' Love this art, very stylish! Lovely art!  Well made, and local artist!',' Ann Smith, USA')
-		.text-center
-			button.btn.btn-primary(type="button") load more
+			+e.slider--js.swiper
+				+e.row.grid-js.swiper-wrapper.row
+					mixin item(i,t,p)
+						+e.slide.col-lg-4.col-md-6.col-sm-6.col-xs-12.grid-item.swiper-slide
+							+b.sReviews-item.card
+								+e.img-wrap
+									+img(src=`img/rew-${i}.png`).res-i
+								p=t
+								+icon("fish")
+								+e.addr!=p
+								
+					+item(1,'Great quality and craftsmanship! We purchased one for each of my fisherman sons. Love this art, very stylish! Lovely art! Well made, and local artist!','Ann Smith, USA')
+					+item(2,'It was great to help people make an amazing artworks.',' Marco Marazzi, Italy')
+					+item(3,' Great quality and craftsmanship! We purchased one for each of my fisherman sons. Love this art, very stylish! Lovely art! Well made, and local artist!',' Ann Smith, USA')
+					+item(5,' Great quality and craftsmanship! We purchased one for each of my fisherman sons. It was great to help people make an amazing artworks.',' Rebecca Ivory, Germany')
+					+item(4,' Great, inexpensive metal art pieces all made on Cyprus! It was great to help people make an amazing artworks.',' Marco Marazzi, Italy')
+					+item(6,' Love this art, very stylish! Lovely art!  Well made, and local artist!',' Ann Smith, USA')
+					+item(1,'Great quality and craftsmanship! We purchased one for each of my fisherman sons. Love this art, very stylish! Lovely art! Well made, and local artist!','Ann Smith, USA')
+					+item(2,'It was great to help people make an amazing artworks.',' Marco Marazzi, Italy')
+					+item(3,' Great quality and craftsmanship! We purchased one for each of my fisherman sons. Love this art, very stylish! Lovely art! Well made, and local artist!',' Ann Smith, USA')
+					+item(5,' Great quality and craftsmanship! We purchased one for each of my fisherman sons. It was great to help people make an amazing artworks.',' Rebecca Ivory, Germany')
+					+item(4,' Great, inexpensive metal art pieces all made on Cyprus! It was great to help people make an amazing artworks.',' Marco Marazzi, Italy')
+					+item(6,' Love this art, very stylish! Lovely art!  Well made, and local artist!',' Ann Smith, USA')
+		.text-center.d-none.d-sm-block
+			button.btn.btn-primary.btn-more-js(type="button") load more
 		+e.gradient-bg
 		+e.gradient-sent 
 	// end sReviews

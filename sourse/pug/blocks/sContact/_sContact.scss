@@ -19,8 +19,10 @@
 	}
 
 	.form-wrap {
-		margin: 0 auto;
-		max-width: rem(443);
+		@include media-breakpoint-up(sm) {
+			margin: 0 auto;
+			max-width: rem(443);
+		}
 		&__input {
 			--bs-border-color: #668a8f;
 			background-color: transparent;
