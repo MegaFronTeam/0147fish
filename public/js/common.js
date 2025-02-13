@@ -1,7 +1,5 @@
 "use strict";
 
-const {create} = require("browser-sync");
-
 // import Swiper from '../libs/swiper/swiper-bundle.min.mjs';
 // import JSCCommon from "./JSCCommon.js";
 

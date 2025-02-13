@@ -114,14 +114,14 @@
 		height: calc(var(--sPT) * 1.4);
 	}
 	&::before {
-		background-image: url(../img/reviews-bg.jpg);
+		background-image: url(../img/reviews-bg.webp);
 		top: 0;
 	}
 	&::after {
 		bottom: 0;
 		// transform: rotate(180deg);
 		// background-position: bottom center;
-		background-image: url(../img/reviews-bg2.png);
+		background-image: url(../img/reviews-bg2.webp);
 		height: calc(var(--sPB) + 15%);
 	}
 	&__row {
