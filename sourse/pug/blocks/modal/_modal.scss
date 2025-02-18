@@ -18,8 +18,22 @@
 	&--lg {
 		width: rem(648);
 	}
+	&__title {
+		color: #023e46;
+		font-weight: bold;
+		text-wrap: balance;
+	}
+	.after-headline {
+		font-weight: 500;
+		// font-size: rem(18);
+		@include rfs(18px);
+		color: #668a8f;
+	}
+	&__head {
+	}
+	&__head,
 	.form-wrap {
-		max-width: rem(328);
+		max-width: rem(340);
 		margin-inline: auto;
 	}
 
@@ -190,5 +204,47 @@ a {
 	to {
 		transform: translate3d(0, 10%, 0);
 		opacity: 0;
+	}
+}
+
+.fancybox__content > .f-button.is-close-btn {
+	top: rem(20);
+	right: rem(20);
+}
+
+.fancybox__container {
+	--fancybox-color: #023e46;
+}
+
+.fancybox__content > .f-button.is-close-btn {
+	--f-button-svg-width: #{rem(16)};
+	--f-button-svg-height: #{rem(16)};
+}
+
+.form-wrap__input-wrap--fish-name {
+	position: relative;
+	label {
+		position: absolute;
+		padding-left: $input-btn-padding-x;
+
+		font-weight: 500;
+		font-size: rem(10px);
+		top: rem(10);
+
+		color: #668a8f;
+	}
+	input {
+		background: rgba(102, 138, 143, 0.1);
+		padding-top: calc(#{$input-btn-padding-y} + 10px);
+		padding-bottom: calc(#{$input-btn-padding-y} - 10px);
+		padding-right: calc(#{$input-btn-padding-x} + #{rem(54)});
+		border-color: rgba(102, 138, 143, 0.1);
+	}
+	img {
+		position: absolute;
+		top: rem(10);
+		right: $input-btn-padding-x;
+		max-width: rem(48);
+		max-height: rem(48);
 	}
 }

@@ -8,7 +8,7 @@
 		// --bs-gutter-x: #{rem()};
 		// @include media-breakpoint-up(md) {
 		align-items: center;
-		--bs-gutter-y: var(--bs-gutter-x);
+		// --bs-gutter-y: 0;
 		// }
 	}
 	.section-title {

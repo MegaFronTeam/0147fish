@@ -55,14 +55,18 @@ mixin in-c(typ="checkbox", text, name= typ )
 			+e.SPAN.text.form-check-label= text
  
 mixin add-file(n)
-	+b.add-file
+	+b.add-file.form-control
 		label
 			+e.INPUT.input(name='file', type='file')
-			+e.SPAN.btn 
-			+e.SPAN.text   Прикрепить резюме
-		+e.SPAN.filename 
+			+e.SPAN.filename 
+			+e.SPAN.text Upload File
+			+e.SPAN.btn.btn.btn-primary
+				+icon("upload")
+	.row
 
-
+		.col.small .JPG, .PNG or .PDF file, max 10 MB
+		.col-auto
+			.invalid-message  Max file size exceeded
 mixin policy()
 	+e.policy
 		+in-c()(checked)
@@ -73,9 +77,11 @@ mixin policy()
 mixin form-base()
 	+form-wrap
 		+input("Name","text","name")
+			.invalid-message Name is required
 		+input("Email","email","email")
+			.invalid-message Email address is required
 		+input("Message","textarea","message")
 
-		+input('Upload File','file')
-					.small .JPG, .PNG or .PDF file, max 10 MB
+		
+					
 		block

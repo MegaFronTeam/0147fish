@@ -1,7 +1,7 @@
 // start .sGallery
 .sGallery {
 	@include media-breakpoint-up(xl) {
-		--sPT: #{rem(238)};
+		// --sPT: #{rem(238)};
 		--sTPB: #{rem(80)};
 	}
 	position: relative;

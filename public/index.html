@@ -28,17 +28,17 @@
 									</div>
 									<nav>
 										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">About the Project</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">How to Order</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Gallery</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Reviews</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Partners</a></li>
+											<li class="menu-item" itemprop="item"><a href="#sAbout" itemprop="url">About the Project</a></li>
+											<li class="menu-item" itemprop="item"><a href="#sHowToOrder" itemprop="url">How to Order</a></li>
+											<li class="menu-item" itemprop="item"><a href="#sGallery" itemprop="url">Gallery</a></li>
+											<li class="menu-item" itemprop="item"><a href="#sReviews" itemprop="url">Reviews</a></li>
+											<li class="menu-item" itemprop="item"><a href="#sPartners" itemprop="url">Partners</a></li>
 										</ul>
 									</nav>
 								</div>
 							</div>
 						</div>
-						<div class="top-nav__col col-auto"><a class="btn btn-sm btn-primary" href="#">contact us</a>
+						<div class="top-nav__col col-auto"><a class="btn btn-sm btn-primary" href="#sContact">contact us</a>
 						</div>
 						<div class="col-auto d-lg-none">
 							<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
@@ -55,7 +55,7 @@
 						<div class="section-title text-center">
 							<h1>Join&nbsp;us to&nbsp;create <span>the longest <img src="img/headerBlock.png" alt=""/>copper composition in&nbsp;the world! </span></h1>
 						</div>
-						<div class="headerBlock__btns"><a class="btn btn-warning" href="#">Order Fish</a><a class="btn btn-primary" href="#">view gallery</a>
+						<div class="headerBlock__btns"><a class="btn btn-warning" href="#sHowToOrder">Order Fish</a><a class="btn btn-primary" href="#sGallery">view gallery</a>
 						</div>
 					</div>
 				</div>
@@ -123,9 +123,9 @@
 				</div>
 				<!-- end sMap-->
 				<!-- start sAbout-->
-				<section class="sAbout section" id="sAbout">
+				<section class="sAbout section">
 					<div class="container">
-						<div class="section-title text-center">
+						<div class="section-title text-center" id="sAbout">
 							<h2>About the Project</h2>
 							<p class="h5">The most common theory suggests that the name<br/>of the island Cyprus comes from the Latin word "cuprum", which<br/>means "copper". As early as the 13th century BCE, Cyprus was widely known as the "copper" island, a center for copper mining.</p>
 						</div><img class="img-1 border-40" src="img/sAbout-img-1.jpg" alt="" loading="lazy"/>
@@ -150,9 +150,9 @@
 				</section>
 				<!-- end sAbout-->
 				<!-- start sHowToOrder-->
-				<section class="sHowToOrder section" id="sHowToOrder">
+				<section class="sHowToOrder section">
 					<div class="container">
-						<div class="section-title text-center">
+						<div class="section-title text-center" id="sHowToOrder">
 							<h2>How to Order</h2>
 							<p class="h5">Cyprus was widely known as the "copper" island, a center for copper mining.</p>
 						</div>
@@ -165,7 +165,7 @@
 									</div>
 									<div class="sHowToOrder-item__text text-secondary">You will find more than 100 types of fish installations in our gallery, so you are sure to find something suitable.
 									</div>
-									<a class="sHowToOrder-item__btn btn btn-warning" href="#">Choose Art Work
+									<a class="sHowToOrder-item__btn btn btn-warning" href="#sGallery">Choose Art Work
 									</a>
 								</div>
 							</div>
@@ -198,15 +198,15 @@
 				</section>
 				<!-- end sHowToOrder-->
 				<!-- start sGallery-->
-				<section class="sGallery section" id="sGallery">
+				<section class="sGallery section">
 					<div class="container">
-						<div class="section-title text-center">
+						<div class="section-title text-center" id="sGallery">
 							<h2>Gallery</h2>
 							<p class="h5">Choose your Fish from the Gallery and send us its number  via the Contact Us form.</p><a class="btn btn-warning" href="#">contact us</a>
 						</div>
 						<div class="sGallery__slider sGallery__slider--js swiper">
 							<div class="swiper-wrapper">
-									<div class="sGallery__slide swiper-slide">
+									<a class="sGallery__slide swiper-slide link-modal-js" href="#modal-fish" data-name="1" data-path="img/prod-1.png">
 										<div class="sGallery-item"> 
 											<p>Fish 12</p>
 											<div class="sGallery-item__img-wrap"><img class="res-i" src="img/prod-1.png" alt="" loading="lazy"/>
@@ -214,8 +214,8 @@
 											<div class="sGallery-item__btn btn btn-sm btn-warning">choose fish
 											</div>
 										</div>
-									</div>
-									<div class="sGallery__slide swiper-slide">
+									</a>
+									<a class="sGallery__slide swiper-slide link-modal-js" href="#modal-fish" data-name="2" data-path="img/prod-2.png">
 										<div class="sGallery-item"> 
 											<p>Fish 13</p>
 											<div class="sGallery-item__img-wrap"><img class="res-i" src="img/prod-2.png" alt="" loading="lazy"/>
@@ -223,8 +223,8 @@
 											<div class="sGallery-item__btn btn btn-sm btn-warning">choose fish
 											</div>
 										</div>
-									</div>
-									<div class="sGallery__slide swiper-slide">
+									</a>
+									<a class="sGallery__slide swiper-slide link-modal-js" href="#modal-fish" data-name="3" data-path="img/prod-3.png">
 										<div class="sGallery-item"> 
 											<p>Fish 14</p>
 											<div class="sGallery-item__img-wrap"><img class="res-i" src="img/prod-3.png" alt="" loading="lazy"/>
@@ -232,8 +232,8 @@
 											<div class="sGallery-item__btn btn btn-sm btn-warning">choose fish
 											</div>
 										</div>
-									</div>
-									<div class="sGallery__slide swiper-slide">
+									</a>
+									<a class="sGallery__slide swiper-slide link-modal-js" href="#modal-fish" data-name="1" data-path="img/prod-1.png">
 										<div class="sGallery-item"> 
 											<p>Fish 12</p>
 											<div class="sGallery-item__img-wrap"><img class="res-i" src="img/prod-1.png" alt="" loading="lazy"/>
@@ -241,8 +241,8 @@
 											<div class="sGallery-item__btn btn btn-sm btn-warning">choose fish
 											</div>
 										</div>
-									</div>
-									<div class="sGallery__slide swiper-slide">
+									</a>
+									<a class="sGallery__slide swiper-slide link-modal-js" href="#modal-fish" data-name="2" data-path="img/prod-2.png">
 										<div class="sGallery-item"> 
 											<p>Fish 13</p>
 											<div class="sGallery-item__img-wrap"><img class="res-i" src="img/prod-2.png" alt="" loading="lazy"/>
@@ -250,8 +250,8 @@
 											<div class="sGallery-item__btn btn btn-sm btn-warning">choose fish
 											</div>
 										</div>
-									</div>
-									<div class="sGallery__slide swiper-slide">
+									</a>
+									<a class="sGallery__slide swiper-slide link-modal-js" href="#modal-fish" data-name="3" data-path="img/prod-3.png">
 										<div class="sGallery-item"> 
 											<p>Fish 14</p>
 											<div class="sGallery-item__img-wrap"><img class="res-i" src="img/prod-3.png" alt="" loading="lazy"/>
@@ -259,8 +259,8 @@
 											<div class="sGallery-item__btn btn btn-sm btn-warning">choose fish
 											</div>
 										</div>
-									</div>
-									<div class="sGallery__slide swiper-slide">
+									</a>
+									<a class="sGallery__slide swiper-slide link-modal-js" href="#modal-fish" data-name="1" data-path="img/prod-1.png">
 										<div class="sGallery-item"> 
 											<p>Fish 12</p>
 											<div class="sGallery-item__img-wrap"><img class="res-i" src="img/prod-1.png" alt="" loading="lazy"/>
@@ -268,8 +268,8 @@
 											<div class="sGallery-item__btn btn btn-sm btn-warning">choose fish
 											</div>
 										</div>
-									</div>
-									<div class="sGallery__slide swiper-slide">
+									</a>
+									<a class="sGallery__slide swiper-slide link-modal-js" href="#modal-fish" data-name="2" data-path="img/prod-2.png">
 										<div class="sGallery-item"> 
 											<p>Fish 13</p>
 											<div class="sGallery-item__img-wrap"><img class="res-i" src="img/prod-2.png" alt="" loading="lazy"/>
@@ -277,8 +277,8 @@
 											<div class="sGallery-item__btn btn btn-sm btn-warning">choose fish
 											</div>
 										</div>
-									</div>
-									<div class="sGallery__slide swiper-slide">
+									</a>
+									<a class="sGallery__slide swiper-slide link-modal-js" href="#modal-fish" data-name="3" data-path="img/prod-3.png">
 										<div class="sGallery-item"> 
 											<p>Fish 14</p>
 											<div class="sGallery-item__img-wrap"><img class="res-i" src="img/prod-3.png" alt="" loading="lazy"/>
@@ -286,8 +286,8 @@
 											<div class="sGallery-item__btn btn btn-sm btn-warning">choose fish
 											</div>
 										</div>
-									</div>
-									<div class="sGallery__slide swiper-slide">
+									</a>
+									<a class="sGallery__slide swiper-slide link-modal-js" href="#modal-fish" data-name="1" data-path="img/prod-1.png">
 										<div class="sGallery-item"> 
 											<p>Fish 12</p>
 											<div class="sGallery-item__img-wrap"><img class="res-i" src="img/prod-1.png" alt="" loading="lazy"/>
@@ -295,8 +295,8 @@
 											<div class="sGallery-item__btn btn btn-sm btn-warning">choose fish
 											</div>
 										</div>
-									</div>
-									<div class="sGallery__slide swiper-slide">
+									</a>
+									<a class="sGallery__slide swiper-slide link-modal-js" href="#modal-fish" data-name="2" data-path="img/prod-2.png">
 										<div class="sGallery-item"> 
 											<p>Fish 13</p>
 											<div class="sGallery-item__img-wrap"><img class="res-i" src="img/prod-2.png" alt="" loading="lazy"/>
@@ -304,8 +304,8 @@
 											<div class="sGallery-item__btn btn btn-sm btn-warning">choose fish
 											</div>
 										</div>
-									</div>
-									<div class="sGallery__slide swiper-slide">
+									</a>
+									<a class="sGallery__slide swiper-slide link-modal-js" href="#modal-fish" data-name="3" data-path="img/prod-3.png">
 										<div class="sGallery-item"> 
 											<p>Fish 14</p>
 											<div class="sGallery-item__img-wrap"><img class="res-i" src="img/prod-3.png" alt="" loading="lazy"/>
@@ -313,7 +313,7 @@
 											<div class="sGallery-item__btn btn btn-sm btn-warning">choose fish
 											</div>
 										</div>
-									</div>
+									</a>
 							</div>
 						</div>
 						<div class="sGallery__controls">
@@ -333,9 +333,9 @@
 				</section>
 				<!-- end sGallery-->
 				<!-- start sReviews-->
-				<section class="sReviews section" id="sReviews">
+				<section class="sReviews section">
 					<div class="container">
-						<div class="section-title text-center">
+						<div class="section-title text-center" id="sReviews">
 							<h2>Reviews</h2>
 						</div>
 						<div class="sReviews__slider sReviews__slider--js swiper">
@@ -497,9 +497,9 @@
 				</section>
 				<!-- end sReviews-->
 				<!-- start sPartners-->
-				<section class="sPartners section" id="sPartners">
+				<section class="sPartners section">
 					<div class="container">
-						<div class="section-title text-center">
+						<div class="section-title text-center" id="sPartners">
 							<h2>Partners</h2>
 							<p class="h5">Cyprus was widely known as the "copper" island, a center for copper mining.</p>
 						</div>
@@ -595,8 +595,8 @@
 				</section>
 				<!-- end sPartners-->
 				<!-- start sContact-->
-				<section class="sContact section" id="sContact">
-					<div class="container">
+				<section class="sContact" id="sContact">
+					<div class="sContact__form container section">
 						<div class="section-title text-center">
 							<h2>Contact Us</h2>
 							<p class="h5">We are happy to answer any questions you have,   and usually we respond within a few hours.</p>
@@ -604,22 +604,27 @@
 						<div class="form-wrap">
 							<form>
 								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="name" type="text" placeholder="Name"/>
+									<div class="invalid-message">Name is required</div>
 								</div>
 								<!-- +e.input-wrap-->
 								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="Email"/>
+									<div class="invalid-message">Email address is required</div>
 								</div>
 								<!-- +e.input-wrap-->
 								<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="message" placeholder="Message"></textarea>
-								</div>
-								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="file" name="file" type="file"/>
-									<div class="small">.JPG, .PNG or .PDF file, max 10 MB</div>
 								</div>
 								<!-- +e.input-wrap-->
 								<div class="text-center">
 									<button class="btn btn-warning" type="submit">Send Message</button>
 								</div>
 							</form>
+						</div>
+					</div>
+					<div class="sContact__thank container section">
+						<div class="section-title text-center">
+							<h2>Thank You!</h2>
+							<p class="h5">Your message has been sent successfully, <br> we will contact you shortly.</p>
+							<button class="btn btn-white" type="button">send another message</button>
 						</div>
 					</div>
 				</section>
@@ -640,11 +645,11 @@
 						<div class="col-md-4 col-6">
 							<nav>
 								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">About the Project</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">How to Order</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Gallery</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Reviews</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Partners</a></li>
+									<li class="menu-item" itemprop="item"><a href="#sAbout" itemprop="url">About the Project</a></li>
+									<li class="menu-item" itemprop="item"><a href="#sHowToOrder" itemprop="url">How to Order</a></li>
+									<li class="menu-item" itemprop="item"><a href="#sGallery" itemprop="url">Gallery</a></li>
+									<li class="menu-item" itemprop="item"><a href="#sReviews" itemprop="url">Reviews</a></li>
+									<li class="menu-item" itemprop="item"><a href="#sPartners" itemprop="url">Partners</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -665,24 +670,22 @@
 		<!-- #modal-call-->
 		<div id="modal-create" style="display: none">
 			<div class="modal-win modal-win--lg">
-				<div class="text-center">
+				<div class="modal-win__head text-center">
 					<div class="modal-win__title form-data h3">Create art work  from your sketch
 					</div>
-					<p class="after-headline">Send&nbsp;us your sketch, we&nbsp;will study it&nbsp;and contact you to&nbsp;discuss the details.</p>
+					<p class="after-headline">Send&nbsp;us your sketch, we&nbsp;will study it and&nbsp;contact you to&nbsp;discuss the details.</p>
 				</div>
 				<div class="form-wrap">
 					<form>
 						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="name" type="text" placeholder="Name"/>
+							<div class="invalid-message">Name is required</div>
 						</div>
 						<!-- +e.input-wrap-->
 						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="Email"/>
+							<div class="invalid-message">Email address is required</div>
 						</div>
 						<!-- +e.input-wrap-->
 						<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="message" placeholder="Message"></textarea>
-						</div>
-						<!-- +e.input-wrap-->
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="file" name="file" type="file"/>
-							<div class="small">.JPG, .PNG or .PDF file, max 10 MB</div>
 						</div>
 						<!-- +e.input-wrap--> 
 						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="file" name="file" type="file"/>
@@ -693,6 +696,69 @@
 							<button class="btn btn-warning" type="submit">Send  </button>
 						</div>
 					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div id="modal-fish" style="display: none">
+			<div class="modal-win modal-win--lg">
+				<div class="modal-win__head text-center">
+					<div class="modal-win__title form-data h3">Create art work  from our gallery
+					</div>
+					<p class="after-headline">We will make a fish for you according to the model as shown in our gallery.</p>
+				</div>
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="name" type="text" placeholder="Name"/>
+							<div class="invalid-message">Name is required</div>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="Email"/>
+							<div class="invalid-message">Email address is required</div>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="message" placeholder="Message"></textarea>
+						</div>
+						<!-- +e.input-wrap--> 
+						<div class="form-wrap__input-wrap form-wrap__input-wrap--fish-name form-group">
+							<label>Selected fish</label>
+							<input class="fish-name form-control" type="text" name="fish" readonly="readonly"/><img class="fish-img" src="" alt=""/>
+						</div>
+						<div class="text-center mt-5">
+							<button class="btn btn-warning" type="submit">Send  </button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div id="modal-thanks" style="display: none">
+			<div class="modal-win modal-win--lg">
+				<div class="modal-win__head text-center">
+					<div class="modal-win__title form-data h3">Thanks  <br> for your request!
+					</div>
+					<div class="text-center mb-2"><svg width="42" height="14" viewBox="0 0 42 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M36.7866 7.67136L37.5089 7.00043L36.7866 6.32977C36.5535 6.11331 31.0021 1.03172 24.0117 1.03172C18.209 1.03172 13.4009 4.5306 11.8003 5.84414C8.46575 3.44629 6.52888 0.283718 6.50876 0.25L4.93994 1.19492C5.02607 1.33857 6.91874 4.43626 10.2867 7.00043C6.91874 9.56488 5.02607 12.6623 4.93994 12.8062L6.50933 13.75C6.52944 13.7166 8.45271 10.5625 11.8 8.15643C19.2173 14.5273 28.4555 15.3672 36.7866 7.67136ZM13.2949 7.00043C14.7492 8.12781 17.786 10.2939 21.7977 10.939C22.7642 11.0946 24.5326 11.1306 25.1357 11.081C29.4829 10.7237 33.1611 8.22046 34.7294 7.00156C33.0234 5.67924 28.8252 2.86319 24.0117 2.86319C19.1996 2.86319 15.002 5.67754 13.2949 7.00043Z" fill="#023E46"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M21.7977 10.939C17.786 10.2939 14.7492 8.12781 13.2949 7.00043C15.002 5.67754 19.1996 2.86319 24.0117 2.86319C28.8252 2.86319 33.0234 5.67924 34.7294 7.00156C33.1611 8.22046 29.4829 10.7237 25.1357 11.081C24.5326 11.1306 22.7642 11.0946 21.7977 10.939ZM30.0386 8.17114C29.6805 8.17114 29.3725 8.06036 29.1149 7.83823C28.8571 7.61638 28.7282 7.34098 28.7282 7.01118C28.7282 6.68223 28.8497 6.40286 29.0934 6.17364C29.3368 5.94471 29.6374 5.82996 29.9955 5.82996C30.3389 5.82996 30.6217 5.94811 30.8438 6.18441C31.0657 6.42071 31.1768 6.70348 31.1768 7.03299C31.1768 7.34806 31.0694 7.61638 30.8549 7.83823C30.6401 8.06036 30.3678 8.17114 30.0386 8.17114Z" fill="#023E46"/>
+</svg>
+					</div>
+					<p class="after-headline">We will study your request and contact you shortly to clarify the details.</p>
+					<button class="btn btn-primary w-100 modal-close-js" type="button">select another art work</button>
+				</div>
+			</div>
+		</div>
+		<div id="modal-thanks-create" style="display: none">
+			<div class="modal-win modal-win--lg">
+				<div class="modal-win__head text-center">
+					<div class="modal-win__title form-data h3">Thanks  <br> for your request!
+					</div>
+					<div class="text-center mb-2"><svg width="42" height="14" viewBox="0 0 42 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M36.7866 7.67136L37.5089 7.00043L36.7866 6.32977C36.5535 6.11331 31.0021 1.03172 24.0117 1.03172C18.209 1.03172 13.4009 4.5306 11.8003 5.84414C8.46575 3.44629 6.52888 0.283718 6.50876 0.25L4.93994 1.19492C5.02607 1.33857 6.91874 4.43626 10.2867 7.00043C6.91874 9.56488 5.02607 12.6623 4.93994 12.8062L6.50933 13.75C6.52944 13.7166 8.45271 10.5625 11.8 8.15643C19.2173 14.5273 28.4555 15.3672 36.7866 7.67136ZM13.2949 7.00043C14.7492 8.12781 17.786 10.2939 21.7977 10.939C22.7642 11.0946 24.5326 11.1306 25.1357 11.081C29.4829 10.7237 33.1611 8.22046 34.7294 7.00156C33.0234 5.67924 28.8252 2.86319 24.0117 2.86319C19.1996 2.86319 15.002 5.67754 13.2949 7.00043Z" fill="#023E46"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M21.7977 10.939C17.786 10.2939 14.7492 8.12781 13.2949 7.00043C15.002 5.67754 19.1996 2.86319 24.0117 2.86319C28.8252 2.86319 33.0234 5.67924 34.7294 7.00156C33.1611 8.22046 29.4829 10.7237 25.1357 11.081C24.5326 11.1306 22.7642 11.0946 21.7977 10.939ZM30.0386 8.17114C29.6805 8.17114 29.3725 8.06036 29.1149 7.83823C28.8571 7.61638 28.7282 7.34098 28.7282 7.01118C28.7282 6.68223 28.8497 6.40286 29.0934 6.17364C29.3368 5.94471 29.6374 5.82996 29.9955 5.82996C30.3389 5.82996 30.6217 5.94811 30.8438 6.18441C31.0657 6.42071 31.1768 6.70348 31.1768 7.03299C31.1768 7.34806 31.0694 7.61638 30.8549 7.83823C30.6401 8.06036 30.3678 8.17114 30.0386 8.17114Z" fill="#023E46"/>
+</svg>
+					</div>
+					<p class="after-headline">We will study your drawing and contact you shortly to clarify the details.</p>
+					<button class="btn btn-primary w-100 modal-close-js" type="button">select another art work</button>
 				</div>
 			</div>
 		</div>

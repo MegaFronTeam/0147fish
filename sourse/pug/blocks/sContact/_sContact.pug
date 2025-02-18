@@ -1,12 +1,18 @@
 mixin sContact()
 	// start sContact
-	+b.SECTION.sContact.section#sContact&attributes(attributes)
-		.container
+	+b.SECTION.sContact#sContact&attributes(attributes)
+		+e.form.container.section
 			+b.section-title.text-center
 				h2 Contact Us
 				p.h5 We are happy to answer any questions you have,   and usually we respond within a few hours.
 			+form-base()
 				.text-center
 					button.btn.btn-warning(type="submit") Send Message
+		+e.thank.container.section
+			+b.section-title.text-center
+				h2 Thank You!
+				p.h5 Your message has been sent successfully, <br> we will contact you shortly.
+			
+				button.btn.btn-white(type="button") send another message
 
 	// end sContact

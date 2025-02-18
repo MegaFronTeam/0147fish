@@ -1,10 +1,10 @@
 {
 	"nav": [
-		{"name": "About the Project", "url": "#"},
-		{"name": "How to Order", "url": "#"},
-		{"name": "Gallery", "url": "#"},
-		{"name": "Reviews", "url": "#"},
-		{"name": "Partners", "url": "#"}
+		{"name": "About the Project", "url": "#sAbout"},
+		{"name": "How to Order", "url": "#sHowToOrder"},
+		{"name": "Gallery", "url": "#sGallery"},
+		{"name": "Reviews", "url": "#sReviews"},
+		{"name": "Partners", "url": "#sPartners"}
 	],
 	"social": ["fb", "instagram", "telegram"],
 	"index": {

@@ -1,9 +1,9 @@
 mixin sReviews(data)
 	// start sReviews
-	+b.SECTION.sReviews.section#sReviews&attributes(attributes)
+	+b.SECTION.sReviews.section&attributes(attributes)
 
 		.container
-			+b.section-title.text-center
+			+b.section-title.text-center#sReviews
 				h2 Reviews
 			+e.slider--js.swiper
 				+e.row.grid-js.swiper-wrapper.row

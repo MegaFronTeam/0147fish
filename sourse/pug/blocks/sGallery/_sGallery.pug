@@ -1,8 +1,8 @@
 mixin sGallery(data)
 	// start sGallery
-	+b.SECTION.sGallery.section#sGallery&attributes(attributes)
+	+b.SECTION.sGallery.section&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+b.section-title.text-center#sGallery
 				h2 Gallery
 				p.h5 Choose your Fish from the Gallery and send us its number  via the Contact Us form.
 				a.btn.btn-warning(href="#") contact us
@@ -10,7 +10,7 @@ mixin sGallery(data)
 				.swiper-wrapper
 
 					mixin item(i,t)
-						+e.slide.swiper-slide
+						+e.slide.swiper-slide( href="#modal-fish" data-name= i data-path= `img/prod-${i}.png`).link-modal-js
 							+b.sGallery-item 
 								p=t
 								+e.img-wrap

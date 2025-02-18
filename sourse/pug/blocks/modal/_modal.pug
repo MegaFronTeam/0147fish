@@ -17,15 +17,48 @@ mixin modal()
 	// #modal-call
 	div(id="modal-create"  style="display: none" )
 		+b.modal-win--lg
-			.text-center
+			+e.head.text-center
 				+e.title.form-data.h3 Create art work  from your sketch
-				p.after-headline Send&nbsp;us your sketch, we&nbsp;will study it&nbsp;and contact you to&nbsp;discuss the details.
+				p.after-headline Send&nbsp;us your sketch, we&nbsp;will study it and&nbsp;contact you to&nbsp;discuss the details.
 			+form-base() 
 				
 				+input('Upload File','file')
 					.small .JPG, .PNG or .PDF file, max 10 MB
 				.text-center
 					button.btn.btn-warning(type="submit") Send  
+	// #modal-call
+
+	
+	div(id="modal-fish"  style="display: none" )
+		+b.modal-win--lg
+			+e.head.text-center
+				+e.title.form-data.h3 Create art work  from our gallery
+				p.after-headline We will make a fish for you according to the model as shown in our gallery.
+			+form-base() 
+				+e.input-wrap--fish-name.form-group
+					label Selected fish
+					input(type="text" name="fish" readonly).fish-name.form-control
+					img(src="", alt="").fish-img
+				.text-center.mt-5
+					button.btn.btn-warning(type="submit") Send  
+	// #modal-call
+	mixin modal-thanks(id, t)
+		div(id= id || "modal-thanks"  style="display: none" )
+			+b.modal-win--lg
+				+e.head.text-center
+					+e.title.form-data.h3 Thanks  <br> for your request!
+					.text-center.mb-2
+						<svg width="42" height="14" viewBox="0 0 42 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M36.7866 7.67136L37.5089 7.00043L36.7866 6.32977C36.5535 6.11331 31.0021 1.03172 24.0117 1.03172C18.209 1.03172 13.4009 4.5306 11.8003 5.84414C8.46575 3.44629 6.52888 0.283718 6.50876 0.25L4.93994 1.19492C5.02607 1.33857 6.91874 4.43626 10.2867 7.00043C6.91874 9.56488 5.02607 12.6623 4.93994 12.8062L6.50933 13.75C6.52944 13.7166 8.45271 10.5625 11.8 8.15643C19.2173 14.5273 28.4555 15.3672 36.7866 7.67136ZM13.2949 7.00043C14.7492 8.12781 17.786 10.2939 21.7977 10.939C22.7642 11.0946 24.5326 11.1306 25.1357 11.081C29.4829 10.7237 33.1611 8.22046 34.7294 7.00156C33.0234 5.67924 28.8252 2.86319 24.0117 2.86319C19.1996 2.86319 15.002 5.67754 13.2949 7.00043Z" fill="#023E46"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M21.7977 10.939C17.786 10.2939 14.7492 8.12781 13.2949 7.00043C15.002 5.67754 19.1996 2.86319 24.0117 2.86319C28.8252 2.86319 33.0234 5.67924 34.7294 7.00156C33.1611 8.22046 29.4829 10.7237 25.1357 11.081C24.5326 11.1306 22.7642 11.0946 21.7977 10.939ZM30.0386 8.17114C29.6805 8.17114 29.3725 8.06036 29.1149 7.83823C28.8571 7.61638 28.7282 7.34098 28.7282 7.01118C28.7282 6.68223 28.8497 6.40286 29.0934 6.17364C29.3368 5.94471 29.6374 5.82996 29.9955 5.82996C30.3389 5.82996 30.6217 5.94811 30.8438 6.18441C31.0657 6.42071 31.1768 6.70348 31.1768 7.03299C31.1768 7.34806 31.0694 7.61638 30.8549 7.83823C30.6401 8.06036 30.3678 8.17114 30.0386 8.17114Z" fill="#023E46"/>
+							</svg>
+
+					p.after-headline= t || 'We will study your request and contact you shortly to clarify the details.'
+					button.btn.btn-primary(type="button").w-100.modal-close-js select another art work
+
+	+modal-thanks()
+	+modal-thanks('modal-thanks-create','We will study your drawing and contact you shortly to clarify the details.')
+
 	// #modal-call
 
 	

@@ -48,21 +48,33 @@ class JSCCommon {
 			},
 		});
 		document.querySelectorAll(".modal-close-js").forEach(el => {
-			el.addEventListener("click", () => {
-				Fancybox.close();
+			el.addEventListener("click", event => {
+				event.preventDefault();
+				const instance = Fancybox.getInstance();
+				if (instance) {
+					instance.close();
+				}
 			});
 		});
 
 		document.addEventListener("click", event => {
 			let element = event.target.closest(link);
 			if (!element) return;
-			let modal = document.querySelector(element.dataset.src);
+
+			let modal = document.querySelector(element.attributes.href.value);
+
+			console.log(modal);
 			const data = element.dataset;
 
 			function setValue(val, elem) {
 				if (elem && val) {
 					const el = modal.querySelector(elem);
-					el.tagName == "INPUT" ? (el.value = val) : (el.innerHTML = val);
+					console.log(elem, val);
+					el.tagName == "INPUT"
+						? (el.value = val)
+						: el.tagName == "IMG"
+							? (el.src = val)
+							: (el.innerHTML = val);
 					// console.log(modal.querySelector(elem).tagName)
 				}
 			}
@@ -70,6 +82,8 @@ class JSCCommon {
 			setValue(data.text, ".after-headline");
 			setValue(data.btn, ".btn");
 			setValue(data.order, ".order");
+			setValue(data.name, ".fish-name");
+			setValue(data.path, ".fish-img");
 		});
 	}
 	// /modalCall
@@ -116,46 +130,6 @@ class JSCCommon {
 	}
 	// tabs  .
 	static tabsCostume(tab) {
-		// const tabs = document.querySelectorAll(tab);
-		// const indexOf = element => Array.from(element.parentNode.children).indexOf(element);
-		// tabs.forEach(element => {
-		// 	let tabs = element;
-		// 	const tabsCaption = tabs.querySelector(".tabs__caption");
-		// 	const tabsBtn = tabsCaption.querySelectorAll(".tabs__btn");
-		// 	const tabsWrap = tabs.querySelector(".tabs__wrap");
-		// 	const tabsContent = tabsWrap.querySelectorAll(".tabs__content");
-		// 	const random = Math.trunc(Math.random() * 1000);
-		// 	tabsBtn.forEach((el, index) => {
-		// 		const data = `tab-content-${random}-${index}`;
-		// 		el.dataset.tabBtn = data;
-		// 		const content = tabsContent[index];
-		// 		content.dataset.tabContent = data;
-		// 		if (!content.dataset.tabContent == data) return;
-
-		// 		const active = content.classList.contains('active') ? 'active' : '';
-		// 		// console.log(el.innerHTML);
-		// 		content.insertAdjacentHTML("beforebegin", `<div class="tabs__btn-accordion  btn btn-primary  mb-1 ${active}" data-tab-btn="${data}">${el.innerHTML}</div>`)
-		// 	})
-
-		// 	tabs.addEventListener('click', function (element) {
-		// 		const btn = element.target.closest(`[data-tab-btn]:not(.active)`);
-		// 		if (!btn) return;
-		// 		const data = btn.dataset.tabBtn;
-		// 		const tabsAllBtn = this.querySelectorAll(`[data-tab-btn`);
-		// 		const content = this.querySelectorAll(`[data-tab-content]`);
-		// 		tabsAllBtn.forEach(element => {
-		// 			element.dataset.tabBtn == data
-		// 				? element.classList.add('active')
-		// 				: element.classList.remove('active')
-		// 		});
-		// 		content.forEach(element => {
-		// 			element.dataset.tabContent == data
-		// 				? (element.classList.add('active'), element.previousSibling.classList.add('active'))
-		// 				: element.classList.remove('active')
-		// 		});
-		// 	})
-		// })
-
 		$("." + tab + "__caption").on(
 			"click",
 			"." + tab + "__btn:not(.active)",
@@ -310,33 +284,6 @@ class JSCCommon {
 					$(this).toggleClass("active");
 				});
 		});
-		// let parents = document.querySelectorAll('.dd-group-js');
-		// for (let parent of parents) {
-		// 	if (parent) {
-		// 		// childHeads, kind of funny))
-		// 		let ChildHeads = parent.querySelectorAll('.dd-head-js:not(.disabled)');
-		// 		$(ChildHeads).click(function () {
-		// 			let clickedHead = this;
-
-		// 			$(ChildHeads).each(function () {
-		// 				if (this === clickedHead) {
-		// 					//parent element gain toggle class, style head change via parent
-		// 					$(this.parentElement).toggleClass('active');
-		// 					$(this.parentElement).find('.dd-content-js').slideToggle(function () {
-		// 						$(this).toggleClass('active');
-		// 					});
-		// 				}
-		// 				else {
-		// 					$(this.parentElement).removeClass('active');
-		// 					$(this.parentElement).find('.dd-content-js').slideUp(function () {
-		// 						$(this).removeClass('active');
-		// 					});
-		// 				}
-		// 			});
-
-		// 		});
-		// 	}
-		// }
 	}
 
 	static imgToSVG() {
@@ -411,6 +358,13 @@ class JSCCommon {
 		});
 	}
 
+	static CustomInputFile() {
+		$(document).on("change", ".add-file input", function () {
+			var filename = $(this).val().replace(/.*\\/, "");
+			$(this).parent().find(".add-file__filename").html(filename);
+		});
+	}
+
 	static init() {
 		this.modalCall();
 		// this.tabsCostume('tabs');
@@ -425,6 +379,6 @@ class JSCCommon {
 		// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 		// JSCCommon.animateScroll();
 
-		// JSCCommon.CustomInputFile();
+		this.CustomInputFile();
 	}
 }
