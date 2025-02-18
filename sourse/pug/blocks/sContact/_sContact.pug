@@ -5,10 +5,7 @@ mixin sContact()
 			+b.section-title.text-center
 				h2 Contact Us
 				p.h5 We are happy to answer any questions you have,   and usually we respond within a few hours.
-			+form-wrap
-				+input("Name","text","name")
-				+input("Email","email","email")
-				+input("Message","textarea","message")
+			+form-base()
 				.text-center
 					button.btn.btn-warning(type="submit") Send Message
 

@@ -67,3 +67,15 @@ mixin policy()
 	+e.policy
 		+in-c()(checked)
 			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+
+
+
+mixin form-base()
+	+form-wrap
+		+input("Name","text","name")
+		+input("Email","email","email")
+		+input("Message","textarea","message")
+
+		+input('Upload File','file')
+					.small .JPG, .PNG or .PDF file, max 10 MB
+		block

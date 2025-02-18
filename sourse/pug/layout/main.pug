@@ -8,41 +8,19 @@ html(lang="ru")
 
 		block title
 			title title
-		meta(name="description", content="о чем страница")
+		meta(name="description", content="FishFlow – the world's largest bronze art composition in Cyprus. Artificial intelligence and ancient bronze casting technologies unite in a unique project. Participate and create your own bronze fish!")
+		<meta name="keywords" content="FishFlow, artificial intelligence, bronze sculptures, contemporary art, innovation, AI, Cyprus, technology, bronze casting, art objects">
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
-		//- meta(name="viewport", content="width=device-width, shrink-to-fit=no")
-		//- meta(name="viewport",  content="width=575,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no")
-		//- script.
-		//- 	let viewport = document.querySelector("meta[name=viewport]");
-		//- 	var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-		//- 	if (is_safari) {
-		//- 		//- alert(navigator.userAgent);
-		//- 		function w() {
-		//- 			this.outerWidth > 575 
-		//- 				? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" 
-		//- 				:  viewport.content = "width=575,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
-		//- 			//- alert(this.outerWidth + ', '+  viewport.content);
-		//- 		}
-		//- 		 w();
-		//- 		window.addEventListener('resize', () => { 
-		//- 		 w();
-		//- 		}, { passive: true });
-		//- 	}
+
+		<meta property="og:title" content="FishFlow – Innovative Bronze Sculptures in Cyprus, Created with AI Technology">
+
+		<meta property="og:description" content="Create your own bronze fish using artificial intelligence and become part of the world's largest art composition in Cyprus!">
+
+		 
 		meta(name="viewport", content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover")
 		link(type="image/ico", href='img/favicon.ico', rel='shortcut icon') 
 		<meta name="format-detection" content="telephone=no"> 
-		+allcss()
-		script.
-			function addBlock(elem) {
-				fetch(`parts/${elem}.html`)
-					.then(response => response.text())
-					.then( text => {
-						const wrap = document.querySelector(`#${elem}Wrap`);
-						wrap.insertAdjacentHTML('afterend', text);
-						wrap.previousElementSibling.remove()
-						wrap.remove();
-					});
-			}
+		+allcss() 
 	block variables
 	//- style.
 	//- 	.loaded_hiding {  opacity: 0; pointer-events: none;  } .loaded_hiding::before { display: none; }
