@@ -1,11 +1,17 @@
 // start .headerBlock
 .headerBlock {
 	--sPT: #{rem(80)};
-	--sPB: 10px;
+	--sPB: 80px;
 	--sTPB: #{rem(40)};
 	position: relative;
 	z-index: 3;
 	background-color: #fff;
+	// mask-image: linear-gradient(
+	// 	0deg,
+	// 	transparent 0,
+	// 	rgba(0, 0, 0, 0.1) 40px,
+	// 	#000 80px
+	// );
 
 	// min-height: 100vh;
 	// min-height: calc(var(--vh, 1vh) * 100);

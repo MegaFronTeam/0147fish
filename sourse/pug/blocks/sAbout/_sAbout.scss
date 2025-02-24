@@ -6,20 +6,20 @@
 	position: relative;
 	z-index: 2;
 
-	&::before {
-		content: "";
-		position: absolute;
-		width: 200%;
-		aspect-ratio: 2390/ 263;
-		// height: ;
-		left: calc(50%);
-		transform: translate(-50%, -50%);
-		top: 0;
-		z-index: -1;
+	// &::before {
+	// 	content: "";
+	// 	position: absolute;
+	// 	width: 200%;
+	// 	aspect-ratio: 2390/ 263;
+	// 	// height: ;
+	// 	left: calc(50%);
+	// 	transform: translate(-50%, -50%);
+	// 	top: 0;
+	// 	z-index: -1;
 
-		background: #022636;
-		filter: blur(calc(1vw + 20px));
-	}
+	// 	// background: #022636;
+	// 	filter: blur(calc(1vw + 20px));
+	// }
 
 	.img-1 {
 		display: block;
