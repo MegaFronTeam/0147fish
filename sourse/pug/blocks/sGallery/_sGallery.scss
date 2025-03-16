@@ -59,9 +59,18 @@
 		overflow: visible;
 		margin-bottom: rem(60);
 	}
-	.swiper-slide:hover {
-		--text-color: var(--bs-body-color);
-		--bg: #ffd5bf;
+	@media (hover: hover) {
+		.swiper-slide:hover {
+			--text-color: var(--bs-body-color);
+			--bg: #ffd5bf;
+			--op: 1;
+		}
+	}
+	@media (hover: none) {
+		.swiper-slide.swiper-slide-active {
+			--text-color: var(--bs-body-color);
+			--bg: #ffd5bf;
+		}
 		--op: 1;
 	}
 
