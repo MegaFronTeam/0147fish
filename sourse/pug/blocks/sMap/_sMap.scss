@@ -9,8 +9,8 @@
 	mask-image: linear-gradient(
 		0deg,
 		transparent 0,
-		rgba(0, 0, 0, 0.1) calc(var(--sPB) / 2),
-		#000 calc(var(--sPB))
+		rgba(0, 0, 0, 0.1) calc(var(--sPB)),
+		#000 calc(var(--sPB) * 2)
 	);
 	&::before {
 		content: "";
@@ -19,7 +19,7 @@
 		// height: ;
 		left: calc(50%);
 		transform: translate(-50%, -60%);
-		top: calc(var(--sPT) * -0.5);
+		top: calc(var(--sPT) * -0.2);
 		z-index: 2;
 
 		background: #ffffff;
